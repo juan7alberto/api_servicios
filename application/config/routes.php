@@ -53,9 +53,15 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+//api services
 $route["services"]["post"]="services/create_service";
 $route['services/(:num)']["patch"] = "services/update_service/$1";
-
 $route["services"]["get"]="services/get_services";
 $route['services/(:num)']["get"] = "services/get_service/$1";
+
+//api notification
+$route["notification"]["post"]="notification/create_notification";
+$route['notification/(:num)']["patch"] = "notification/update_notification/$1";
+$route["notification"]["get"]="notification/get_notifications";
+$route['notification/(:num)']["get"] = "notification/get_notification/$1";
 
